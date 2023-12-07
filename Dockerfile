@@ -1,5 +1,6 @@
 FROM ollama/ollama:latest
 WORKDIR /app
 COPY ./Modelfile .
-RUN ollama create sipr_copilot -f Modelfile
-CMD [ "ollama","run sipr_copilot" ]
+RUN ollama serve & sleep 2 && ollama create jarvis -f Modelfile
+ENTRYPOINT ["/bin/ollama"]
+CMD ["run jarvis"]
