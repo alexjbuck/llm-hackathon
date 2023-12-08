@@ -4,8 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./.ollama:/usr/share/ollama/.ollama
     ports:
       - 11434:11434
     restart: always
