@@ -1,0 +1,6 @@
+FROM python:3.10.13-bookworm
+WORKDIR /app
+RUN pip install continuedev
+COPY continue.config.json ~/.continue/config.json
+ENTRYPOINT [ "python"]
+CMD [ "-m", "continuedev" ]

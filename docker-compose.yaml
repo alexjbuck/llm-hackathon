@@ -3,7 +3,15 @@ services:
   ollama:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.ollama
     ports:
       - 11434:11434
+    restart: always
+
+  continuedev:
+    build:
+      context: .
+      dockerfile: Dockerfile.continue
+    ports:
+      - 65432:65432
     restart: always

@@ -1,0 +1,15 @@
+{
+    "models": [
+        {
+            "title": "Ollama",
+            "provider": "ollama",
+            "model": "jarvis"
+        },
+        {
+            "title": "Ollama",
+            "provider": "ollama",
+            "model": "starcoder:1b"
+        }
+    ],
+    "allow_anonymous_telemetry": false
+}
